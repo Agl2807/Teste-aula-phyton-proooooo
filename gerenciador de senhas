@@ -1,0 +1,23 @@
+banco_dados = []
+
+while True:
+    opcao = input("1: Salvar | 2: Ver | 3: Sair -> ")
+
+    if opcao == "1":
+        site = input("Site: ")
+        senha = input("Senha: ")
+        
+        # Guarda o texto direto na lista
+        banco_dados.append(site + " : " + senha)
+        print("Salvo!")
+
+    elif opcao == "2":
+        if len(banco_dados) == 0:
+            print("Vazio.")
+        else:
+            print("--- SENHAS ---")
+            for item in banco_dados:
+                print(item)
+
+    elif opcao == "3":
+        break
